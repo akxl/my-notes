@@ -8,7 +8,7 @@ public final class MyJavaIterable<T> implements Iterable<T>, Iterator<T> {
     private final T parameter1;
     private final T parameter2;
     private final T parameter3;
-    private int parameterCounter = 0;
+    private int counter = 0;
 
     public MyJavaIterable(final T parameter1, final T parameter2, final T parameter3) {
         this.parameter1 = parameter1;
@@ -23,7 +23,7 @@ public final class MyJavaIterable<T> implements Iterable<T>, Iterator<T> {
 
     @Override
     public boolean hasNext() {
-        if (parameterCounter < 3) {
+        if (counter < 3) {
             return true;
         } else {
             return false;
@@ -32,14 +32,14 @@ public final class MyJavaIterable<T> implements Iterable<T>, Iterator<T> {
 
     @Override
     public T next() {
-        if (parameterCounter == 0) {
-            parameterCounter++;
+        if (counter == 0) {
+            counter++;
             return parameter1;
-        } else if (parameterCounter == 1) {
-            parameterCounter++;
+        } else if (counter == 1) {
+            counter++;
             return parameter2;
-        } else if (parameterCounter == 2) {
-            parameterCounter++;
+        } else if (counter == 2) {
+            counter++;
             return parameter3;
         } else {
             throw new IndexOutOfBoundsException();
@@ -61,19 +61,19 @@ public final class Main {
          */
         final Integer[] myIntegers = { 1, 2, 3 };
         for (final Integer integer : myIntegers) {
-            System.out.println(String.format("[Array] The number is %d", integer));
+            System.out.println(String.format("[Java Array] The number is: %d", integer));
         }
 
         /**
          * Case 2: using my custom Iterable
          * Prints:
-         * [Custom] The number is 1
-         * [Custom] The number is 2
-         * [Custom] The number is 3
+         * [MyJavaIterable] The number is 1
+         * [MyJavaIterable] The number is 2
+         * [MyJavaIterable] The number is 3
          */
         final Iterable<Integer> myIterable = new MyJavaIterable<>(1, 2, 3);
         for (final Integer integer : myIterable) {
-            System.out.println(String.format("[Custom] The number is %d", integer));
+            System.out.println(String.format("[MyJavaIterable] The number is: %d", integer));
         }
 
 

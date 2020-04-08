@@ -31,9 +31,9 @@ if __name__ == '__main__':
     # using standard Python list
     my_integers = [1, 2, 3]
     for integer in my_integers:
-        print('[List] The number is: {}'.format(integer))
+        print('[Python List] The number is: {}'.format(integer))
 
     # using custom Python iterable
     my_iterable = MyPythonIterable(1, 2, 3)
     for integer in my_iterable:
-        print('[Custom] The number is: {}'.format(integer))
+        print('[MyPythonIterable] The number is: {}'.format(integer))
