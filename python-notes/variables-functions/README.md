@@ -1,8 +1,13 @@
 Variables and Functions
 =======================
 
+I don't write Python for a living. I write Java. But there are times when I find myself needing to work with the occasional Python code. This post is hopefully the first of a series of personal notes to remind myself how Python can be a different from Java. I don't profess to know everything; I'm just the recepient of the occasional jests of "you must be a Java programmer" when I write Python. 
+
+I hope that this may be useful to those of you out there who are in a similar situation to mine.
+
 Introduction
 ------------
+
 This document intends to introduce Python variables and functions to a programmer who may have grown up all their life programming in Java. We will show how Python works on a practical level without neccesarily going into the internal operational details, all the while showing the close-enough Java equivalents for comparison.
 
 Variables
